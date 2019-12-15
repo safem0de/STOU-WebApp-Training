@@ -11,10 +11,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Select from MySQL</title>
+
+<link rel="stylesheet" type="text/css" href="MasterStyle.css">
+
 <style>
 
-td{
-text-align:center;
+table {
+  border-collapse: collapse;
+  margin:auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align:center;
 }
 
 </style>
@@ -22,18 +31,43 @@ text-align:center;
 </head>
 <body>
 
+<form action="studentServlet" method="get" class="form-style-5">
+  Employee: <input type="text" name="uname">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname">
+  Age: <input type="password" name="password"><br>
+  <input type="submit" value="Add New Employee">
+  <input type="reset" value="Clear">
+</form>
+
 <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
 url = "jdbc:mysql://localhost:3307/mobileshopdb"
 user = "user00" password = "user00"/>
+
+<%-- <sql:update dataSource = "${snapshot}" var = "result">
+INSERT INTO employee VALUES (104, 2, 'Nuha', 'Ali');
+</sql:update> --%>
+
+<%-- <c:set var = "empId" value = "103"/>
+<sql:update dataSource = "${snapshot}" var = "count">
+DELETE FROM employee WHERE Id = ?
+<sql:param value = "${empId}" />
+</sql:update> --%>
+
+<c:set var = "empId" value = "102"/>
+<sql:update dataSource = "${snapshot}" var = "count">
+UPDATE employee SET last = 'Ali' WHERE id = ?
+<sql:param value = "${empId}" />
+</sql:update>
 
 <sql:query dataSource = "${snapshot}" var = "result">
 
 SELECT * from employee;
 </sql:query>
-<table border ="1" width = "100%">
+<table>
 <tr>
 
-<th>Emp ID</th>
+<th>Employee ID</th>
 <th>First Name</th>
 <th>Last Name</th>
 <th>Age</th>
