@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class viewStudent
  */
 @WebServlet("/viewStudent")
-public class viewStudent extends HttpServlet {
+public class getStudent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public viewStudent() {
+    public getStudent() {
         super();
         // TODO Auto-generated constructor stub
     }
