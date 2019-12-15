@@ -117,7 +117,7 @@ border-radius: 5vw;
 
 <tr>
 <td><img id="myImg" src="images/huawei.jpg" alt="Huawei" height="200vh" ></td>
-<td><img id="myImg" src="images/iPhone.png" alt="iPhone" height="200vh" onclick="alert(this.id)"></td>
+<td><img src="images/iPhone.png" alt="iPhone" height="200vh" ></td>
 <td><img src="images/OnePlus7.png" height="200vh" ></td>
 <td><img src="images/Oppo Reno.jpg" height="200vh" ></td>
 <td><img src="images/Samsung.png" height="200vh" ></td>
@@ -188,7 +188,6 @@ var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img.onclick = function(){
-	alert(img.id);
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
