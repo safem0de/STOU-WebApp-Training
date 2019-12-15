@@ -116,7 +116,7 @@ border-radius: 5vw;
 <table style="width:100%; text-align:center;" >
 
 <tr>
-<td><img id="myImg" src="/images/Huawei.jpg" alt="Huawei" height="200vh" ></td>
+<td><img id="myImg" src="images/Huawei.jpg" alt="Huawei" height="200vh" ></td>
 <td><img src="images/iPhone.png" alt="iPhone" height="200vh" ></td>
 <td><img src="images/OnePlus7.png" height="200vh" ></td>
 <td><img src="images/Oppo Reno.jpg" height="200vh" ></td>
