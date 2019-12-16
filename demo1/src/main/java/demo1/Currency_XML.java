@@ -7,6 +7,7 @@ import javax.ws.rs.*;
 
 @Path("Currency_XML/{baths}/{dollars}")
 public class Currency_XML {
+	
 	public static final DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 	@GET
 	@Produces("application/xml")
@@ -20,17 +21,18 @@ public class Currency_XML {
 		float d = dollars[i];
 		String rateStr = Float.toString(d);
 		String bathStr = "";
-		String dollarstr = "";
+		String dollarStr = "";
 		
 		if(bathFloat != 0.00)
-			dollarstr = Float.toString(bathFloat/d);
+			dollarStr = Float.toString(bathFloat/d);
 		if(dollarFloat != 0.00)
 			bathStr = Float.toString(d*dollarFloat);
+		
 		return "<currency>"
 				+"<date>"+ dateStr +"</date>"
-				+"<date>"+ rateStr +"</date>"
-				+"<date>"+ bathStr +"</date>"
-				+"<date>"+ dollarstr +"</date>"
+				+"<rate>"+ rateStr +"</rate>"
+				+"<dollars>"+ dollarStr +"</dollars>"
+				+"<baths>"+ bathStr +"</baths>"
 				+"<currency>";
 	}
 }
