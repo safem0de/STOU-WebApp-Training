@@ -20,12 +20,12 @@ String password = "123456789";
 	{
 		Student img = null;
 		
-		String sql = "SELECT * FROM images WHERE image_id = ?";
+		String sql = "SELECT * FROM images"; //WHERE image_id = ?";
 
 		Connection conn = DriverManager.getConnection(databaseURL, user, password);
 		try {
 			PreparedStatement statement = conn.prepareStatement(sql);
-			statement.setInt(1, id);
+			//statement.setInt(1, id);
 			ResultSet rs = statement.executeQuery();
 			
 			if (rs.next()) {
