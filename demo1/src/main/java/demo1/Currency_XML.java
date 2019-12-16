@@ -28,11 +28,11 @@ public class Currency_XML {
 		if(dollarFloat != 0.00)
 			bathStr = Float.toString(d*dollarFloat);
 		
-		return "<currency>"
-				+"<date>"+ dateStr +"</date>"
-				+"<rate>"+ rateStr +"</rate>"
-				+"<dollars>"+ dollarStr +"</dollars>"
-				+"<baths>"+ bathStr +"</baths>"
+		return "<currency>"//
+				+"<date>"+ dateStr +"</date>"//
+				+"<rate>"+ rateStr +"</rate>"//
+				+"<dollars>"+ dollarStr +"</dollars>"//
+				+"<baths>"+ bathStr +"</baths>"//
 				+"<currency>";
 	}
 }
