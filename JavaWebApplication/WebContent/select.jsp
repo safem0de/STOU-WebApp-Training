@@ -54,11 +54,11 @@ DELETE FROM employee WHERE Id = ?
 <sql:param value = "${empId}" />
 </sql:update> --%>
 
-<c:set var = "empId" value = "102"/>
+<%-- <c:set var = "empId" value = "102"/>
 <sql:update dataSource = "${snapshot}" var = "count">
 UPDATE employee SET last = 'Ali' WHERE id = ?
 <sql:param value = "${empId}" />
-</sql:update>
+</sql:update> --%>
 
 <sql:query dataSource = "${snapshot}" var = "result">
 
